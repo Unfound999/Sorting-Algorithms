@@ -1,3 +1,4 @@
+package src;
 
 public class QuickSort {
     public static <T extends Comparable<T>> void quickSort(T[] data, int begin, int end) {
