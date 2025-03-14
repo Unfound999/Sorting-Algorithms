@@ -2,7 +2,7 @@ package src;
 import java.util.Random;
 
 public class QuickSort {
-    public static void quickSort(int[] data, int begin, int end) {
+    public static <T extends Comparable<T>> void quickSort(T[] data, int begin, int end) {
 
         if (begin < end) {
             int partitionIndex = partition(data, begin, end);
@@ -12,13 +12,13 @@ public class QuickSort {
         }
     }
 
-    private static int partition(int[] data, int begin, int end) {
-        int pivot = data[end];
+    private static <T extends Comparable<T>> int partition(T[] data, int begin, int end) {
+        T pivot = data[end];
         int partitionIndex = begin-1;
-        int temp;
+        T temp;
 
         for (int i = begin; end > i; i++) {
-            if (data[i] <= pivot) {
+            if (data[i].compareTo(pivot) == -1|| data[i].compareTo(pivot) == 0) {
                 partitionIndex++;
                 temp = data[partitionIndex];
                 data[partitionIndex] = data[i];
@@ -35,7 +35,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        int[] data = new int[50];
+        Integer[] data = new Integer[50];
 
         for (int i = 0; 50 > i; i++) {
             data[i] = rand.nextInt(50) + 1;
