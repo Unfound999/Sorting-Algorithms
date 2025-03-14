@@ -19,7 +19,7 @@ public class QuickSort {
 
         for (int i = begin; end > i; i++) {
             if (data[i] <= pivot) {
-                i++;
+                partitionIndex++;
                 temp = data[partitionIndex];
                 data[partitionIndex] = data[i];
                 data[i] = temp;
@@ -37,6 +37,20 @@ public class QuickSort {
         Random rand = new Random();
         int[] data = new int[50];
 
-        for (int i = 0; )
+        for (int i = 0; 50 > i; i++) {
+            data[i] = rand.nextInt(50) + 1;
+        }
+
+        System.out.println("Unsorted data");
+        for (int i = 0; 50 > i; i++) {
+            System.out.print(data[i] + " ");
+        }
+
+        quickSort(data, 0, 49);
+
+        System.out.println("\n\nSorted data");
+        for (int i = 0; 50 > i; i++) {
+            System.out.print(data[i] + " ");
+        }
     }
 }
