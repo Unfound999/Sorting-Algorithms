@@ -5,7 +5,7 @@ public class QuickSort {
     //  quickSort algorithm for sorting items
     public static <T extends Comparable<T>> void quickSort(T[] data, int begin, int end) {
 
-        //  base case for recursion, if there is only one or two items being sorted
+        //  base case for recursion, if there is only one or zero items being sorted
         if (begin < end) {
 
             //  breaks down the data into two smaller arrays
@@ -17,7 +17,7 @@ public class QuickSort {
         }
     }
 
-    //  breaks down the data into smaller two arrays
+    //  breaks down the data into two smaller two arrays
     private static <T extends Comparable<T>> int partition(T[] data, int begin, int end) {
         T pivot = data[end];
         int partitionIndex = begin-1;
