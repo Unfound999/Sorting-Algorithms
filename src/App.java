@@ -20,9 +20,9 @@ public class App {
         Scanner input = new Scanner(System.in);
         System.out.println("m.) Merge Sort");
         System.out.println("q.) Quick Sort");
-        System.out.println("s.) Shell Sort");
+        System.out.println("s.) Selection Sort");
         System.out.println("x.) Exit");
-        System.out.print("Sort Selection> ");
+        System.out.print("Selection> ");
         return input.nextLine().toLowerCase();
     }
 
@@ -70,9 +70,9 @@ public class App {
      * The uses the Shell Sort Algorithm to sort the array.
      * Then prints out the value.
      */
-    public static void doShell(){
+    public static void doSelection(){
         Integer[] numbArr = getInputArr();
-        Shellsort.shellSort(numbArr);
+        SelectionSort.selectionSort(numbArr);
         System.out.println(Arrays.toString(numbArr));
     }
 
@@ -103,7 +103,7 @@ public class App {
                     doQuick();
                     break;
                 case "s":
-                    doShell();
+                    doSelection();
                     break;
                 case "x":
                     running = false;
