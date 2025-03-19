@@ -36,6 +36,7 @@ public class App {
         do {
             numbList = new ArrayList<>();
             System.out.println("Please enter the numbers you wish to sort.");
+            System.out.print("Your space seperated ints> ");
             Scanner input = new Scanner(System.in);
             Scanner numbScan = new Scanner(input.nextLine());
             while(numbScan.hasNext()){
@@ -44,6 +45,7 @@ public class App {
                 } catch(InputMismatchException e){
                     System.out.println("Please only insert numbers.");
                     validInput = false;
+                    throw e;
                 }
             }
         } while(!validInput);
@@ -59,7 +61,12 @@ public class App {
      * Then prints out the value.
      */
     public static void doMerge(){
-        Integer[] numbArr = getInputArr();
+        Integer[] numbArr;
+        try{
+            numbArr = getInputArr();
+        } catch(InputMismatchException e){
+            return;
+        }
         MergeSort.mergeSort(numbArr);
         System.out.println(Arrays.toString(numbArr));
     }
@@ -71,7 +78,12 @@ public class App {
      * Then prints out the value.
      */
     public static void doSelection(){
-        Integer[] numbArr = getInputArr();
+        Integer[] numbArr;
+        try{
+            numbArr = getInputArr();
+        } catch(InputMismatchException e){
+            return;
+        }
         SelectionSort.selectionSort(numbArr);
         System.out.println(Arrays.toString(numbArr));
     }
@@ -83,7 +95,12 @@ public class App {
      * Then prints out the value.
      */
     public static void doQuick(){
-        Integer[] numbArr = getInputArr();
+        Integer[] numbArr;
+        try{
+            numbArr = getInputArr();
+        } catch(InputMismatchException e){
+            return;
+        }
         QuickSort.quickSort(numbArr, 0, numbArr.length-1);
         System.out.println(Arrays.toString(numbArr));
     }
