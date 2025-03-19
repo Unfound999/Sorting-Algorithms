@@ -1,18 +1,16 @@
-## Getting Started
+# Sorting Algorithms
+Authors: Christopher Waschke, Jackson Jenks, Brody Weinkauf
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Within this repo there are three files each of which contain one sorting algorithm.
 
-## Folder Structure
+The algorithms are:
+- Merge Sort
+- Quick Sort
+- Shell Sort.
 
-The workspace contains two folders by default, where:
+We've also included a simple test class with a UI wrapper for each of sorting algorithms.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## For Extra Credit:
+- All of the sorting Algorithms were implemented using generics, meaning that they can be used across data types.
+- We've ported our Algorithms to C#, please see the following repo: [Link goes here.]
+- We've also ported our Algorithms to Python, please see the following repo: [Link goes here.]
