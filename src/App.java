@@ -67,7 +67,7 @@ public class App {
      /*
      * static void method
      * Gets the User's input for an array to be sorted.
-     * The uses the Shell Sort Algorithm to sort the array.
+     * The uses the Selection Sort Algorithm to sort the array.
      * Then prints out the value.
      */
     public static void doSelection(){
